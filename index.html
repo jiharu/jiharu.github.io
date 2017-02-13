@@ -1,0 +1,933 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Haru (Hyunkyung) Ji</title>
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/favicon-114.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon/favicon-114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/favicon-144.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/favicon-144.png">
+<link rel="icon" type="image/vnd.microsoft.icon" sizes="32x32 48x48" href="img/favicon/favicon-32.ico">
+<link rel="icon" sizes="128x128" href="img/favicon/favicon-128.icns">
+<link rel="icon" href="img/favicon/favicon-32.png" type="image/x-icon">
+
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+<link rel="stylesheet" href="css/normalize.css">
+<style>
+
+body {
+	font-family: 'Lato', 'Helvetica Neue Light', Helvetica, Arial, sans-serif;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	font-weight: 100;
+	color: #ddd; 
+	background-color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-weight: 100; 
+}
+h1 { font-size: 3.0rem; line-height: 3rem; }
+h2 { font-size: 2.4rem; line-height: 3rem; }
+h3 { font-size: 2.0rem; line-height: 2rem; }
+h4 { font-size: 1.8rem; line-height: 2rem; }
+h5 { font-size: 1.7rem; line-height: 2rem; }
+h6 { font-size: 1.6rem; line-height: 2rem; }
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2em;
+	z-index: 10;
+	
+	display: flex;
+	align-items: center;
+	
+	/*background-color: rgba(10,10,10,0.75);*/
+	background-color: #444;
+	color: #fff;
+	
+	font-size: 1.618em;
+}
+
+main {
+	margin: 5em auto 4em auto;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2em;
+	font-size: 0.8em;
+	z-index: 10;
+	
+	display: flex;
+	align-items: center;
+	
+	/*background-color: rgba(10,10,10,0.75);*/
+	background-color: #444;
+	color: #bbb;
+	
+}
+
+footer a { 
+	color: inherit; 
+} 
+
+.container {
+	width:90%; max-width: 960px;	/* page width */
+	margin: 0 auto 0 auto;
+	
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul { list-style: circle; }
+ol { list-style: decimal; }
+  
+ol, ul {
+	padding-left: 0;
+	margin-left: 1rem;
+}
+
+li { 
+	padding 0px; 
+	margin-top: -0.5em;
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+a, a:visited, a:link, a:hover, a:active {
+	text-decoration: none;
+	background-color: transparent;
+	color: #33bbee;
+   	border-color: #33bbee;
+    border-style: dotted;
+	border-width: 0 0 0px 0;
+}
+
+a:hover {
+	border-width: 0 0 1px 0;	
+}
+
+a img, a:hover img {
+	text-decoration: none;
+}
+
+/* nav */
+nav ul {
+    list-style: none;
+    /*border-bottom: 1px solid #bbb;*/
+    padding: 0px;
+    margin: 0px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 0.25em 0 0;
+}
+
+nav ul li a {
+	color: #3be;
+	
+    text-transform: uppercase;
+    font-size: 0.5em;
+    font-weight: 300;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	border-bottom: 1px solid #3be;
+}
+
+nav ul li a b {
+	
+    text-transform: none;
+    font-size: 1.618em;
+    font-weight: 300;
+	text-decoration: none;
+}
+
+nav ul li a.active {
+	color: #ddd;
+    border-color: #ddd;
+}
+
+/* tabs */
+.tab-view {
+	display: none;
+}
+
+.tab-view.active {
+	display: block;
+}
+
+/* panels */
+
+.side {
+	position: relative;
+	float: right;
+	width: 50%;
+	padding: 0;
+	margin-left: 5%;
+	background-color: #222;
+	clear: both;
+}
+
+/* responsive embed */
+
+.embed {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.embed iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+video {
+  width: 100%    !important;
+  height: auto   !important;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 4em;
+}
+
+/* thumbnails */
+.thumbnailgrid {
+	background-color: #222;
+}
+
+.thumbsquare {
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position: center; 
+	width:18%;
+	padding-top: 18%; /* padding-top matches width to make it square */
+	margin: 1%;
+	display: inline-block;
+}
+
+.thumbnail {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width:30%;
+    padding-top: 30%; /* padding-top matches width to make it square */
+    margin: 1%;
+}
+.thumbnail img {
+    position: absolute;
+    left: -1000%;
+    right: -1000%;
+    top: -1000%;
+    bottom: -1000%;
+    margin: auto;
+    max-height: 100%;
+
+}
+
+
+/* lightbox */
+
+#lightbox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	opacity: 1;
+	
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
+	overflow: hidden;
+	
+	z-index: 20;
+
+	background: rgba(0, 0, 0, .85);
+	
+    text-align: center;
+    
+    display:none;
+}
+
+#lightbox .helper {
+	display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#lightbox img {
+	vertical-align: middle;
+	max-height: 90%;
+	max-width: 90%;
+	border: 6px solid #222;
+}
+
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<nav>
+<ul>
+  <li><a class="active" href="#tab-haru"><b>Haru Ji:</b></a></li>
+  <li><a href="#tab-artificialnature">Artificial Nature</a></li>
+  <li><a href="#tab-3d">3D Research/Practice</a></li>
+  <li><a href="#tab-students">Student work</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="container">
+<section class="tab-view active" id="tab-haru">
+# Haru Ji
+
+Hi.
+</section>
+
+<section class="tab-view clearfix" id="tab-artificialnature">
+# Artificial Nature
+
+Since 2008 Haru Ji has collaborated with Graham Wakefield, producing a series of highly-immersive interactive “Artificial Nature” installations, in a line of research-creation investigating new relationships with a future that is increasingly immersed in computation, but which is directed by the rich complexity and creativity of nature, rather than from conventional utilitarian and anthropocentric perspectives of technology.
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+<div class="side">
+
+<div class="embed"><iframe src="https://player.vimeo.com/video/199496510?title=0&byline=0&portrait=0" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
+<div class="thumbnail"><img src="img/an/ec/feature.png"></div>
+<div class="thumbnail"><img src="img/an/ec/Screenshot_1483978600.png"></div>
+<div class="thumbnail"><img src="img/an/ec/Screenshot_1483978674.png"></div>
+<div class="thumbnail"><img src="img/an/ec/Screenshot_1483978710.png"></div>
+<div class="thumbnail"><img src="img/an/ec/Screenshot_1483978765.png"></div>
+<div class="thumbnail"><img src="img/an/ec/Screenshot_1483978803.png"></div>
+<div class="thumbnail"><img src="img/an/ec/icon1.png"></div>
+
+<div class="thumbnail"><img src="img/an/ec/endlesscurrent06.jpg"></div>
+<div class="thumbnail"><img src="img/an/ec/IMG_0829.jpg"></div>
+<div class="thumbnail"><img src="img/an/ec/IMG_0899.jpg"></div>
+<div class="thumbnail"><img src="img/an/ec/spherical.jpg"></div>
+<div class="thumbnail"><img src="img/an/ec/endlesscurrent_yeosu.jpg"></div>
+<div class="thumbnail"><img src="img/an/ec/cover_spacek.jpg"></div>
+<div class="thumbnail"><img src="img/an/ec/allosphere.jpg"></div>
+<div class="thumbnail"><img src="img/an/ec/IMG_0280.jpg"></div>
+
+</div>
+
+## Endless Current
+
+*Virtual reality (head mounted display or surround projection and sound), artificial ecosystem.*
+
+Endless Current is a visualization of a complex biologically-inspired system. Through immersive display it presents an infinitely explorable world sustaining a virtual ecosystem of multiple species. These artificial life forms subsist within a simulated 3D fluid environment that is constrained by an amorphous landscape reminiscent of underwater or microscopic spaces. Immersed participants view virtual doubles of their hands and arms within this world, with which they can intuitively navigate the space and discover interactions with the simulated life.
+
+**Exhibits:**
+
+- [HTC VivePort virtual reality content distribution network.](https://www.viveport.com/apps/2905a17c-4835-409a-bfe5-f8d2a2f79f27)  2017-01-30 - present.
+
+- SV+VS (Sonifying Visuals+Visualizing Sound). Gallery MUN, Dongdaemun Design Plaza, Seoul, Korea. 2016-08-20 - 2016-09-18 (Curated). 
+
+- [Currents New Media Festival.](https://currentsnewmedia.org/work/endless-current/) El Museo Cultural, and also the Digital Dome at the Institute of American Indian Arts, Santa Fe, USA. 2016-06-10 - 2016-06-26 (Juried).
+
+- [IEEE VIS Arts Program.](http://visap.uic.edu/2015/artshow.html) LeRoy Neiman Center, School of the Art Institute of Chicago, USA. 2015-10-16 - 2015-10-30 (Juried).
+
+- [Artience Project Daejeon.](https://www.facebook.com/ArtienceFestival) Korea Research Institute of Standards and Science, Daejeon, Korea. 2014-08-23 - 2014-09-02 (Curated).
+
+- Life is very Beautiful. Yeulmaru Exhibition Hall, Yeosu, Korea.  2014-02-18 - 2014-04-06 (Curated).
+
+- Life is very Beautiful. Space-K Gallery, KI Building, KAIST, Daejeon, Korea.  2013-10-10 - 2013-12-6 (Curated).  
+ 
+- Korea Electronics Show 2013. KINTEX Convention Center, Ilsan, Korea.    2013-10-07 - 2013-10-10 (Commissioned).
+
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+<div class="side">
+
+<div class="embed">
+<iframe src="https://player.vimeo.com/video/120987833?title=0&byline=0&portrait=0" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<p>&nbsp;</p>
+<div class="embed">
+<iframe src="https://player.vimeo.com/video/89884440?title=0&byline=0&portrait=0" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+<div class="thumbnail"><img src="img/an/archi/archipelago_colorado_clean.jpg"></div>
+
+
+
+</div>
+
+## Archipelago
+
+
+*Sand, projection mapping, mixed reality, artificial ecosystem.*
+
+Archipelago was one of five works awarded Honourable Mention in the Finished Project category of the [VIDA 16.0 Art & Artificial Life competition.](http://vida.fundaciontelefonica.com/en/portfolio/2-special-mentions/)
+
+**Exhibits:**
+
+- Seoul Sangsangryok Baljeonso (Power Station of Creativity). City Hall, Seoul, Korea. 
+2015-02-16 - 2015-02-27 (Invited re-exhibit).
+
+- [Capitaine Futur.](https://gaite-lyrique.net/en/capitaine-futur-and-the-extraordinary-journey) La Gaîté Lyrique, Paris, France. 
+2014-10-08 - 2015-02-08 (Curated).
+
+- Seoul Sangsangryok Baljeonso (Power Station of Creativity). City Hall, Seoul, Korea. 
+2014-10-01 - 2014-10-21 (Juried competition 1st prize, CAD ~$32,000).
+
+- Systems and Subversions. IDEA Space, Edith Kinney Gaylord Cornerstone Arts Center, Colorado Springs, USA. 
+2013-10-28 - 2013-11-5 (Curated).
+
+
+
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+<div class="side">
+
+<div class="embed">
+<iframe src="https://player.vimeo.com/video/38609719?title=0&byline=0&portrait=0" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+<div class="thumbnail"><img src="img/an/tod/GW_panorama.jpg"></div>
+<div class="thumbnail"><img src="img/an/tod/Screen-shot-2012-05-29-at-3.15.02-PM.jpg"></div>
+
+<div class="thumbnail"><img src="img/an/tod/tod_taiwan.jpg"></div>
+
+
+</div>
+
+
+## Time of Doubles / Flux
+
+*Curved screen, mixed reality, artificial ecosystem.*
+
+Time of Doubles is an immersive interactive art installation. It invites visitors to experience mirror existences of themselves taking upon new roles as sources of energy and kinetic disturbance within a perpetually changing virtual ecosystem, a uniquely created computational world. Visitors encounter their doubles in an immersive world through 3D depth cameras, a surround array of active loudspeakers, and projected images. This world displays some characteristics familiar from our own, but is populated by unfamiliar life forms singing, swimming, and breeding through sensitive motions of dark fluids. The visitors’ doubles are energy fields, which emanate myriad bright fluid particles, food sources to be eaten by the virtual organisms. Visitors see, hear, and feel how they are fed to unknown species in this virtual ecosystem. Without visitors, the world-fluid is filled with life seeds that cannot grow, but with human presence the populations explode into alien orchestras of evolutionary growth. Larger organisms hunt smaller ones, leaving physical residues and films behind as they pass, which constrain the fluid flows, and which can be sculpted by visitors’ doubles as they approach them.
+
+**Exhibits:**
+
+- [GLOBALE: Exo-Evolution. Center for Art and Media (ZKM) Mediamuseum, Karlsruhe, Germany.](http://zkm.de/en/event/2015/10/globale-exo-evolution)  
+2015-10-30 - 2016-02-28 (Curated).
+
+- SIGGRAPH ASIA Art Gallery. Hong Kong Exhibition and Conference Centre, Hong Kong SAR. 
+2013-11-19 - 2013-11-22 (Juried).
+*Presented in stereoscopic 3D.*
+
+- Microwave International New Media Festival Enigma. City Hall, Hong Kong. 
+2012-11-03 - 2012-11-25 (Curated).
+
+- 7th Digital Art Festival Taipei 2012: Artificial Nature. Songshan Cultural and Creative Park, Digital Art Center, Taipei, Taiwan. 
+2012-11-06 - 2012-11-25 (Curated).
+
+- Project Daejeon Biennale 2012: Energy. Daejeon Museum of Art, Daejeon, Korea. 
+2012-09-19 - 2012-11-18 (Curated).
+
+- Bits & Pieces. AlloSphere, California NanoSystems Institute, UCSB, USA. 
+2012-05-29 (Curated).
+
+- Collider 04: Spectacle. Emily Davis Art Gallery, Myers School of Art, The University of Akron. 
+2012-03-19 - 2012-04-13 (Curated).
+
+- Questionable Utility. TransLAB, California NanoSystems Institute, Santa Barbara, USA. 
+2011-06-09 (Juried).
+*Presented in stereoscopic 3D.*
+
+- Type:wall. Seoul Olympic Museum of Art (SOMA), Korea. 
+2011-03-31 - 2011-05-29 (Curated).  
+*Invited installation as one of five artworks under the theme of the architectural wall, incorporating sound, ice, breathing, shadows, and interaction.*
+
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+<div class="side">
+
+<div class="embed">
+<iframe src="https://player.vimeo.com/video/31218839?title=0&byline=0&portrait=0" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+</div>
+
+## City Life
+
+*LED media facade 78 x 99 meters, animation.*
+
+- Urban Organism: Triangle Screenscape. Seoul Square media facade. Seoul, Korea. 
+2011-10-11 - 2011-10-30 (Juried).
+
+City Life (도시 생명) is a site-specific generative video for the Seoul Square venue - a media facade of 99x78m located in the heart of Seoul's cityscape. To express a 'world-as-it-could-be' in which city and artificial life coexist, it presents an biological analogue of a metropolis in which the subjects are not citizens, but the city buildings themselves.
+
+The significant challenges of this venue include the vast size of the display, the very low resolution of pixels, and the fact that the office windows are often lit. The animation thus includes a population of virtual buildings, allowing a trompe l’oeil effect whereby the actual windows appear to be part of these virtual buildings, emphasized by the high contrast. The buildings represent a human element at a vast scale, but also animate in the form of growing and undulating life forms. Other alien organisms invade the space and consume these buildings, somewhat akin to Kaiju. A toon-shading rendering style is used to minimize the challenges of working at a low pixel resolution.
+
+
+
+</section>
+
+<section class="tab-view" id="tab-3d">
+# 3D Research / Practice
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+<div class="side">
+<div class="thumbnail"><img src="img/an/chrono/chrono_render2.jpg"></div>
+<div class="thumbnail"><img src="img/an/chrono/chrono_render.jpg"></div>
+<div class="thumbnail"><img src="img/an/chrono/huge1.jpg"></div>
+<div class="thumbnail"><img src="img/an/chrono/huge2.jpg"></div>
+<div class="thumbnail"><img src="img/an/chrono/chronosculpture.jpg"></div>
+
+<div class="thumbnail"><img src="img/an/chrono/lenticular2.gif"></div>
+</div>
+
+## Chronophotography / Chronosculpture
+
+*Lenticular print, 3D print*
+
+This work reprises Étienne-Jules Marey's technique of chronophotography with its  original biological motivation, and yet is entirely artificial. The subject is an artificial life form composed of segmented sections comparable to the class Chilopoda (centipedes), but with trifold symmetric limbs that undulate to propel the organism through a fluid medium. The resulting forms are a product of the organism morphology, the propulsive patterns of its limbs, its predatory macro-behavior, and the viscosity and currents of the fluid it is immersed in.
+
+- Media + Life: Sensorial Collaboration. College of Art, Tokyo Polytechnic University, Tokyo, Japan. 
+2013-02-04 - 2013-02-07 (Curated).
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+<div class="side">
+<div class="thumbnail"><img src="img/morpho/final.jpg"></div>
+<div class="thumbnail"><img src="img/morpho/final-detail.jpg"></div>
+<div class="thumbnail"><img src="img/morpho/final-detail2.jpg"></div>
+<div class="thumbnail"><img src="img/morpho/wirefinal.jpg"></div>
+<div class="thumbnail"><img src="img/morpho/wirefinal-detail.jpg"></div>
+<div class="thumbnail"><img src="img/morpho/wirefinal-detail2.jpg"></div>
+</div>
+
+## Genetic Morphologies
+
+*Generative/evolutionary 3D animation, print*
+
+Exhibited at *Cross-Reality: Traversed & Encompassed Vision.*
+Arts & Information Center, College of Art, Tokyo Polytechnic University, Japan. 
+Feb 20-22 2012.
+
+Genetic Morphology Study is an initial exploration into evolutionary algorithms; a guiding aesthetic prototype for evolving populations of organisms as visual and spatial expression. The intention is to create a biological boundary form between the mathematical and the organic: modular combinations of geometric primitives developed through genetic evolution within a sculptural animation of collective behaviors. Each organismʼs morphology consists of a number of helix and hypercube modules arranged with symmetries varying according to their individual genetic code. The collective behavior of the organism is influenced by its nearest neighbor and the attractions of two ʻstarsʼ. 
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+<div class="side">
+</div>
+
+## EvoSystem
+
+![evosystem](img/an/ecosystem.jpg)
+
+*3D generative animation, genetic algorithm, 1'10".*
+
+The EvoSystem simulation comprised five generations of fifty agents each, produced by modeling in Maya and programming in MEL (Maya Embedded Language).
+
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+<div class="side">
+</div>
+
+
+## NanoMed
+
+Art direction, modeling, and shader development for an immersive, navigable stereoscopic 3D model of human anatomy with simulations representing [nano-scale drug delivery](http://www.allosphere.ucsb.edu/html/research/nanomedicine.html). Showing in the [AlloSphere](http://www.allosphere.ucsb.edu), an immersive facility located in the California Nano Systems Institute (CNSI).
+
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+<div class="side">
+</div>
+
+## TransForms
+
+Transforms is a sculptural computer animation showing continuously shifting patterns of form and color in a virtual space. An initial set of simple spheres deforms into very complex organic forms by tornado-like forces. Like rocks, formed by a process of wind or rain, the shapes transform themselves under dynamic conditions. This change of form can be a dialog with nature by mathematical calculation. A particle is attached to each vertex of the surface. Using a dynamic field, these particles pull and change the location of vertices. Simultaneously, a noisy texture map animates according to key-framing. It is a part of the project named Suntithenai.
+
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+<div class="side">
+</div>
+
+## UCSB Virtual Campus
+
+*Virtual architecture, Second Life.*
+
+Commission by the Transcriptions digital humanities lab to design and construct UCSB’s virtual campus in Second Life, including a classroom space, adjoining gallery/performance space, and community garden. Funded by a 2007 Instructional Improvement Grant, campus departments use the land for virtual academic instruction, conferences and field trips, as well as social events. Any individual with a free Second Life account can visit and use UCSB Lane. 
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+<div class="side">
+</div>
+
+## Emote
+
+Emote is an emotional animal communication device with a human at its heart. This is a form of proposal as a digital sculpture.
+
+- Concept, Modeling and Animation: Haru Ji
+- Concept and Website: Alex Norman
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+<div class="side">
+</div>
+
+## Sanctum
+
+Sanctum is a virtual symbolic space based upon poetic, sculptural and visual concepts. In this world everything changes constantly: the skin of the goddess (symbolizing a Gaea-like goddess), globular particles inside of the goddess, babystones (sculptural objects), the shapes of doors, the moon, the sun, water and the camera movements.
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+<div class="side">
+</div>
+
+## Airemin
+
+Airemin is a USB musical interface that measures its distance from objects using infrared sensing. It is inspired by the desire to have a compact and easy-to-handle Theremin-like device. It can be played with the other hand or scanned against any other object, such as another performer. In addition the device has a thumb button on the top and a finger dial on the back. The device effectively gives the user two continuous control axes and a trigger to start/stop events.
+
+- Device Design, 3D Modeling and Fabrication: Haru Ji 
+- Coding, Visual Music and Fabrication: Lance Putnam
+
+</section>
+
+
+<section class="tab-view" id="tab-students">
+# Student Work
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+
+### Introduction to 3D Modelling 
+
+*York University, 2015-2016. Lecture & studio/lab, 4 sections.*
+
+This course is designed for students to learn both practical and theoretical knowledge in constructing and managing three-dimensional modeling and texturing data, with an emphasis on modelling used in 3D art, narrative media, and games. The course features weekly assignments and  three projects to help students build problem-solving abilities toward the subject in an incremental way, and taking a creative approach to expressive 3D modeling and texturing.. Each class consists of one hour of lecture and two hours of lab practice. The level of the course covers beginner to intermediate modeling and shading. [Course notes](https://jiharu.github.io/datt2500/).
+
+<div id="3dmodeling-york" class="thumbnailgrid"></div>
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+
+### Introduction to 3D Animation 
+
+*York University, 2016-2017. Lecture & studio/lab, 3 sections.*
+
+This course provides a foundation in 3D animation using state of the art render time 3D modelling and animation software such as Maya, Blender, and 3DS Max. The course provides a survey of various animation techniques and approaches with an emphasis on animation for 3D art, narrative media, data visualization, and games. Topics include scene building, character animation, timeline based animation techniques, and the use of 3D graphics in simulation and visualization. For Winter 2017, it utilizes the motion capture (MoCap) system at the AMPD CineSpace Motion Media Studio to teach real-time motion capture, rigging, and animation of student-authored models.
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+
+### 3D Modelling Studio 
+
+*Sogang University, 2013-2016. Lecture & studio/lab. Taught in English.*
+
+This course focuses on 3D character design and modeling for animation, game, and other 3D applications. Students are introduced to character design and modeling methods such as modeling with primitives, NURBS, polygons and subdivision surfaces, and methods for 3D print fabrication. During the class, we will broadly expand our subjects from modeling to shading, digital cinematography, and special effects in Maya. 
+
+<div id="3dmodeling-sogang" class="thumbnailgrid"></div>
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+
+### 3D Animation Practice & Theory 
+
+*Sogang University, 2013. Taught in English.*
+
+The goal of this class is for students to learn both practical and theoretical knowledge in digital animation: theoretically, focusing on transition from traditional animation and practically, three-dimensional animation techniques.
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+
+### 3D Fabrication 
+
+*York University, 2016.*
+
+[Modeling for 3D Fabrication](https://jiharu.github.io/visa3033/) is an art studio class to learn theoretical and practical knowledge in constructing and managing 3D solid modeling data, which can be processed later for 3D fabrication, and empower students' creative expression. The course takes a practice-based arts research approach to modeling for 3D fabrication, considered as an expressive medium rather than a tool. Students carry out interdisciplinary artistic research of innovative and exquisite 3D fabrication case studies to gain firm understanding and inspire new creative ideas. Based on this, students pursue further research and practice on how to use digital technologies to construct 3D models for 3D printing. The 3D software used in the class includes Meshlab, Meshmixer, 123D, Blender, Autodesk Maya and many more, to extend students’ art-based problem-solving abilities and support their unique 3D fabricated expression.
+
+<div id="3dfabrication-york" class="thumbnailgrid"></div>
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+
+### Spatial Dynamics 
+
+*Sogang University, 2016. Lecture & studio/lab. Taught in Korean, course materials in English.*
+
+Spatial dynamics is an art studio course which explores objects in space, and spaces of objects, in terms of formations, functions and temporal relations. Students learn through lectures, hands-on practice, and group critique, developing an understanding of material capacities and core principles in the construction of form and structure, using paper, clay, and other basic plaster materials. Working as individuals or in groups, while taking an interdisciplinary stance bridging roles of artist, designer, and engineer, students will define theoretical and creative challenges found in nature and art to produce three-dimensional artworks integrating object and space, light and surface, image and time, and form and function.
+
+<div id="spatialdynamics-sogang" class="thumbnailgrid"></div>
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+
+### Drawing 
+
+*Sogang University, 2013. Lecture & studio/lab. Taught in English (some critiques given in Korean)*
+
+Drawing is an art studio course in which students develop basic skills to convey and articulate complex and abstract ideas and personal expression into visual forms. Students will learn the theoretical foundations of drawing as visual representation and communication through lectures, hands-on practice, and group critique. During the class, they will explore different materials, techniques, and themes, grounded in detailed observation and free imagination. For the final project, students will be encouraged to apply further contemporary experimentation responding to his/her own style.
+
+<div id="drawing-sogang" class="thumbnailgrid"></div>
+
+<!-- -------------------------------------------------------------------- -->
+<span class="clearfix"> </span>
+
+### Drawing 
+
+*Hongik University, 2005*
+
+<div id="drawing-hongik" class="thumbnailgrid"></div>
+
+
+</section>
+</div>
+</main>
+<footer>
+<div class="container">
+&copy; 2017 Haru (Hyunkyung) Ji, haruoneday at gmail dot com
+</div>
+</footer>
+
+<div id="lightbox">
+	<span class="helper"></span>
+	<img id="lightbox-image" src="img/3dmodeling-york/anaschohan.jpg">
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/showdown.js"></script>
+<script>
+
+
+// on load:
+function onload() {
+	
+	// translate markdown:
+	var converter = new Showdown.converter({
+		ghCompatibleHeaderId: true,
+		literalMidWordUnderscores: true,
+	});
+	$(".tab-view").each(function() {
+		var section = $(this);
+		var text = section.html();
+		var html = converter.makeHtml(text);
+		section.html(html);
+	});
+	
+	// generate student portfolio views:
+	var students = [
+		{
+			name: "3dmodeling-york",
+			images: [
+				"anaschohan.jpg",
+				"benjamingallego.jpg",
+				"brentmacdonald.jpg",
+				"bruna_ferreira.jpg",
+				"candice_ho.jpg",
+				"elinalex01.jpg",
+				"elinalex02.jpg",
+				"justin_casale.jpg",
+				"koeun_lee1.jpg",
+				"kyle_ospreay.jpg",
+				"lazoponcho01.jpg",
+				"lazoponcho02.jpg",
+				"margaritachekhovskaya01.jpg",
+				"margaritachekhovskaya02.jpg",
+				"marinafreirewelby.jpg",
+				"mattdemelo.jpg",
+				"maxineveneracion01.jpg",
+				"maxineveneracion02.jpg",
+				"michael_calcada.jpg",
+				"minypham01.jpg",
+				"minypham02.jpg",
+				"vivian_cheung.jpg",
+				"zhuoxuan_li.jpg",
+				"zohebdowlut.jpg"
+			]
+		},
+		{
+			name: "3dmodeling-sogang",
+			images: [
+				//"01_김신01.jpg",
+				"01_김신02.jpg",
+				"02_정다은01.jpg",
+				"02_정다은02.jpg",
+				"02_정다은03.jpg",
+				"03_윤정원.jpg",
+				"계유림.jpg",
+				"서혁진.jpg",
+				"이다영.jpg",
+				"정유경.jpg",
+				"한서희.jpg",
+				"한영은.jpg"
+			]
+		},
+		{
+			name: "3dfabrication-york",
+			images: [
+				"amanda_and_katrina01.jpg",
+				"amanda_and_katrina02.jpg",
+				"camille_mendiola.jpg",
+				"david_fisher01.jpg",
+				"david_fisher02.jpg",
+				"figoliwo01.jpg",
+				"figoliwo02.jpg",
+				"figoliwo03.jpg",
+				"fishfuser01.jpg",
+				"fishfuser02.jpg",
+				"lazo_poncho.jpg",
+				"saga.jpg"
+			]
+		},
+		{
+			name: "spatialdynamics-sogang",
+			images: [
+				"heeyeon_choi.jpg",
+				"soohyeon_han01.jpg",
+				"soohyeon_han02.jpg",
+				"soohyeon_han03.jpg",
+				"soohyeon_han04.jpg",
+				//"soohyeon_han05.jpg"
+			]
+		},
+		{
+			name: "drawing-sogang",
+			images: [
+				"haneulkim01.jpg",
+				"haneulkim02.jpg",
+				"jisookim.jpg",
+				//"sabby01.jpg",
+				"sabby02.jpg",
+				"sabby03.jpg",
+				"박건우01.jpg",
+				"박건우02.jpg",
+				"윤정원.jpg",
+				"이건희.jpg",
+				"이윤경01.jpg",
+				"이윤경02.jpg",
+				"이종욱01.jpg",
+				"이종욱02.jpg",
+				"이지윤.jpg",
+				"이혜영.jpg",
+				"이화승01.jpg",
+				"이화승02.jpg",
+				"정다은01.jpg",
+				"정다은02.jpg",
+				"정동연01.jpg",
+				"정동연02.jpg",
+				"천재윤01.jpg",
+				"천재윤02.jpg",
+				"최세희01.jpg",
+				"최세희02.jpg"
+			]
+		},
+		{
+			name: "drawing-hongik",
+			images: [
+				"hyunkilee.jpg",
+				"jinpyeongchoi.jpg",
+				"jinpyeongchoi01.jpg",
+				"jinwoooh01.jpg",
+				"jinwoooh02.jpg",
+				"seoyoungshin.jpg",
+				"soominoh.jpg",
+				"soominoh01.jpg"
+			]
+		},
+	];
+	
+	for (var i=0; i<students.length; i++) {
+		var data = students[i];
+		var html = [];
+		for (var j=0; j<data.images.length; j++) {
+			var img = "img/" + data.name + "/" + data.images[j];
+			//html.push('<div class="thumbsquare" style="background-image: url(\'' + img + '\')"></div>');
+			html.push('<div class="thumbsquare" style="background-image: url(\'' + img + '\')" onclick="showlightbox(\'' + img + '\')"></div>');
+			//html.push('<div class="thumbnail"><img src="' + img + '"></div>');
+		}
+		
+		$("#"+data.name).html(html.join(""));
+	}
+	
+	// get chosen tab:
+	function showtab(href) {
+		console.log("show", href);
+	
+		// hide all tabs:
+		$('.tab-view.active', $(href).parent()).removeClass('active');
+		// show chosen tab:
+		$(href).addClass('active');
+		
+		// highlight chosen link
+		$('li a.active').removeClass('active');
+		// find link with this href:
+		$('a[href="'+href+'"]').addClass('active');
+	}
+	// auto select on load:
+	var tab = window.location.hash.substr(1);
+	if (tab) showtab("#"+tab);
+	// enable tab buttons:
+	$('nav ul li a').click(function() {
+        var href = $(this).attr('href');
+        showtab(href);
+    });
+    
+    /* lightbox interaction */
+    $("#lightbox").click(function() {
+    	$(this).hide();
+    });
+    
+    $(".thumbsquare").click(function() {
+    	var bg = $(this).css('background-image').trim();
+    	bg = bg.replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
+    	console.log("heyclick", bg);
+    	
+    	showlightbox(bg);
+    });
+    
+    $(".thumbnail img").click(function() {
+    	var bg = $(this).attr('src').trim();
+    	//bg = bg.replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
+    	//console.log("heyclick", bg);
+    	
+    	showlightbox(bg);
+    });
+	
+}
+$(onload);
+
+function showlightbox(href) {
+	$("#lightbox-image").attr("src", href);
+	$("#lightbox").show();
+}
+
+</script>
+
+</body>
+</html>
