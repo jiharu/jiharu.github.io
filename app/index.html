@@ -1272,7 +1272,9 @@ function onload() {
 			html.push('<a class="thumbnail width18" href="'+img+'" data-title="'+data.title+'"><img src="'+thumb+'"></a>');
 		}
 		
-		$("#"+data.name).html(html.join(""));
+		var out = html.join("");
+		
+		$("#"+data.name).html(out);
 	}
 	
 	// get chosen tab:
