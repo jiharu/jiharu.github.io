@@ -223,32 +223,27 @@ video {
 
 /* thumbnails */
 .thumbnailgrid {
+	padding: 0px;
+	margin: 0px;
+	overflow:hidden;
 	background-color: #222;
 }
 
-.thumbsquare {
-	background-size:cover;
-	background-repeat:no-repeat;
-	background-position: center; 
-	width:18%;
-	padding-top: 18%; /* padding-top matches width to make it square */
-	margin: 1%;
-	display: inline-block;
-}
-
 .width30 {
-	width:30%;
+	width:32%;
 }
 
-.width18 {
-	width:18%;
+.width20 {
+	width:19%;
 }
 
 .thumbnail {
     overflow: hidden;
     position: relative;
-    display: inline-block;
-    margin: 1%;
+    /*display: inline-block;*/
+    float: left;
+    margin: 0.5%;
+    padding: 0px;
 }
 .thumbnail:hover {
     border-style: none;
@@ -271,173 +266,14 @@ video {
   width: 100%;
   object-fit: cover;
   border-style: none;
+  border-width: 0px;
+  margin: 0%;
+  padding: 0;
 }
 
 .thumbnail:visited img {
   border-style: none;
 }
-
-.thumbnail img0 {
-    position: absolute;
-    left: -1000%;
-    right: -1000%;
-    top: -1000%;
-    bottom: -1000%;
-    margin: auto;
-    max-height: 100%;
-
-}
-
-
-/* lightbox */
-
-#lightbox {
-	position: fixed;
-	overflow: hidden;
-	
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 20;
-	
-	width:100%;
-    height:100%;
-    
-    text-align: center;  /* align the inline(-block) elements horizontally */
-    font: 0/0 a;         /* remove the gap between inline(-block) elements */
-    
-	background: rgba(200, 0, 0, .85);
-	
-	display:none;
-}
-
-#lightbox:before {      /* create a full-height inline block pseudo-element */
-    content: ' ';
-    display: inline-block;
-    vertical-align: middle; /* vertical alignment of the inline element */
-    height: 90%;
-}
-
-#lightbox2 {
-	height: 90%;
-    display: inline-block;
-    vertical-align: middle;          /* vertical alignment of the inline element */
-    font: 16px/1 Arial, sans-serif;  /* reset the font property */
-    
-    padding: 5px;
-    border: 2px solid white;
-}
-
-#lightbox-image {
-	max-height: 50%;
-	max-width: 90%;
-}
-
-/*
-#lightbox {
-	width:100%;
-	height:100%;
-	
-	position: fixed;
-	overflow: hidden;
-	
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 20;
-	
-	background: rgba(200, 0, 0, .85);
-	
-	display: none;
-}
-
-#lightbox2 {
-	position: relative; 
-	overflow: hidden; 
-	margin: 0 auto;
-	width: 50%; height: 50%;
-	
-	display:table-cell;
-	
-	vertical-align:middle;
-	text-align: center;
-	
-	background: rgba(0, 200, 0, .85);
-}
-
-#lightbox-content {
-	max-height: 90%;
-	max-width: 90%;
-	background: rgba(0, 0, 200, .85);
-}
-
-#lightbox-image {
-	max-height: 90%;
-	max-width: 90%;
-}
-
-
-#lightbox {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	opacity: 1;
-	
-	margin: 0px;
-	padding: 0px;
-	width: 100%;
-	height: 100%;
-	-webkit-transition: opacity .5s ease-in-out;
-	-moz-transition: opacity .5s ease-in-out;
-	-o-transition: opacity .5s ease-in-out;
-	transition: opacity .5s ease-in-out;
-	overflow: hidden;
-	
-	z-index: 20;
-
-	background: rgba(0, 0, 0, .85);
-	
-    text-align: center;
-    
-    display:none;
-}
-
-
-#lightbox .helper {
-	display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-
-
-#lightbox img {
-	vertical-align: middle;
-	max-height: 90%;
-	max-width: 90%;
-	border: 6px solid #222;
-}
-
-
-#lightbox-content {
-	vertical-align: middle;
-	max-height: 90%;
-	max-width: 90%;
-	min-height: 10%;
-	min-width: 10%;
-	border: 6px solid #222;
-	background-color: #333;
-}
-
-
-#lightbox-caption {
-	z-index: 25;
-	position: absolute;
-	bottom: 10%;
-}
-*/
 
 /* http://dimsemenov.com/plugins/magnific-popup */
 .mfp-with-zoom .mfp-container,
@@ -492,13 +328,15 @@ video {
 
 [Curriculum Vitae (PDF)](https://www.dropbox.com/s/jut587j98nom3md/CurriculumVitae_HaruJi.pdf?dl=0)
 
-Samples of academic writing: 
+Samples of academic writing (if link is not working, right-click as *Download/Save As...*): 
+
 - [Recent conference paper (PDF -- 9MB)](doc/visap2015_Ji_BiologicallyInspired.pdf)
+
 - [PhD dissertation (PDF -- 30MB)](doc/HaruJi_dissertation.pdf)
 
 </section>
 
-<section class="tab-view" id="tab-3d">
+<section class="tab-view active" id="tab-3d">
 # Selected 3D Practice & Research
 
 <!-- -------------------------------------------------------------------- -->
@@ -972,7 +810,7 @@ As a visual artist, art making is my way to pursue a deep understanding of life,
 </section>
 
 
-<section class="tab-view gallery" id="tab-students">
+<section class="tab-view active gallery" id="tab-students">
 # Student Work
 
 <!-- -------------------------------------------------------------------- -->
@@ -984,7 +822,32 @@ As a visual artist, art making is my way to pursue a deep understanding of life,
 
 This course is designed for students to learn both practical and theoretical knowledge in constructing and managing three-dimensional modeling and texturing data, with an emphasis on modelling used in 3D art, narrative media, and games. The course features weekly assignments and  three projects to help students build problem-solving abilities toward the subject in an incremental way, and taking a creative approach to expressive 3D modeling and texturing.. Each class consists of one hour of lecture and two hours of lab practice. The level of the course covers beginner to intermediate modeling and shading. [Course notes](https://jiharu.github.io/datt2500/).
 
-<div id="3dmodeling-york" class="thumbnailgrid"></div>
+<div id="3dmodeling-york" class="thumbnailgrid">
+<a class="thumbnail width20" href="img/3dmodeling-york/anaschohan.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/anaschohan.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/benjamingallego.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/benjamingallego.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/brentmacdonald.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/brentmacdonald.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/bruna_ferreira.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/bruna_ferreira.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/candice_ho.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/candice_ho.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/elinalex01.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/elinalex01.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/elinalex02.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/elinalex02.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/justin_casale.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/justin_casale.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/koeun_lee1.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/koeun_lee1.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/kyle_ospreay.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/kyle_ospreay.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/lazoponcho01.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/lazoponcho01.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/lazoponcho02.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/lazoponcho02.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/margaritachekhovskaya01.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/margaritachekhovskaya01.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/margaritachekhovskaya02.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/margaritachekhovskaya02.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/marinafreirewelby.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/marinafreirewelby.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/mattdemelo.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/mattdemelo.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/maxineveneracion01.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/maxineveneracion01.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/maxineveneracion02.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/maxineveneracion02.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/michael_calcada.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/michael_calcada.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/minypham01.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/minypham01.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/minypham02.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/minypham02.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/vivian_cheung.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/vivian_cheung.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/zhuoxuan_li.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/zhuoxuan_li.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-york/zohebdowlut.jpg" data-title="Student Work: Introduction to 3D Modelling, York University"><img src="img/3dmodeling-york/thumbs/zohebdowlut.jpg"></a>
+</div>
 
 <!-- -------------------------------------------------------------------- -->
 <span class="clearfix"> </span>
@@ -995,7 +858,17 @@ This course is designed for students to learn both practical and theoretical kno
 
 This course provides a foundation in 3D animation using state of the art render time 3D modelling and animation software such as Maya, Blender, and 3DS Max. The course provides a survey of various animation techniques and approaches with an emphasis on animation for 3D art, narrative media, data visualization, and games. Topics include scene building, character animation, timeline based animation techniques, and the use of 3D graphics in simulation and visualization. For Winter 2017, it utilizes the motion capture (MoCap) system at the AMPD CineSpace Motion Media Studio to teach real-time motion capture, rigging, and animation of student-authored models.
 
-<div id="3danimation-york" class="thumbnailgrid"></div>
+<div id="3danimation-york" class="thumbnailgrid">
+<a class="thumbnail width20" href="img/3danimation-york/william.gif" data-title="Student Work: Introduction to 3D Animation, York University"><img src="img/3danimation-york/thumbs/william.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-york/victoria.gif" data-title="Student Work: Introduction to 3D Animation, York University"><img src="img/3danimation-york/thumbs/victoria.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-york/gallego.gif" data-title="Student Work: Introduction to 3D Animation, York University"><img src="img/3danimation-york/thumbs/gallego.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-york/melo.gif" data-title="Student Work: Introduction to 3D Animation, York University"><img src="img/3danimation-york/thumbs/melo.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-york/bruna.gif" data-title="Student Work: Introduction to 3D Animation, York University"><img src="img/3danimation-york/thumbs/bruna.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-york/lazo.gif" data-title="Student Work: Introduction to 3D Animation, York University"><img src="img/3danimation-york/thumbs/lazo.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-york/kewen.gif" data-title="Student Work: Introduction to 3D Animation, York University"><img src="img/3danimation-york/thumbs/kewen.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-york/wong.gif" data-title="Student Work: Introduction to 3D Animation, York University"><img src="img/3danimation-york/thumbs/wong.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-york/noto.gif" data-title="Student Work: Introduction to 3D Animation, York University"><img src="img/3danimation-york/thumbs/noto.gif"></a>
+</div>
 
 <!-- -------------------------------------------------------------------- -->
 <span class="clearfix"> </span>
@@ -1006,7 +879,19 @@ This course provides a foundation in 3D animation using state of the art render 
 
 This course focuses on 3D character design and modeling for animation, game, and other 3D applications. Students are introduced to character design and modeling methods such as modeling with primitives, NURBS, polygons and subdivision surfaces, and methods for 3D print fabrication. During the class, we will broadly expand our subjects from modeling to shading, digital cinematography, and special effects in Maya. 
 
-<div id="3dmodeling-sogang" class="thumbnailgrid"></div>
+<div id="3dmodeling-sogang" class="thumbnailgrid">
+<a class="thumbnail width20" href="img/3dmodeling-sogang/1.jpg" data-title="Student Work: 3D Modelling Studio, Sogang University"><img src="img/3dmodeling-sogang/thumbs/1.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-sogang/2.jpg" data-title="Student Work: 3D Modelling Studio, Sogang University"><img src="img/3dmodeling-sogang/thumbs/2.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-sogang/3.jpg" data-title="Student Work: 3D Modelling Studio, Sogang University"><img src="img/3dmodeling-sogang/thumbs/3.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-sogang/4.jpg" data-title="Student Work: 3D Modelling Studio, Sogang University"><img src="img/3dmodeling-sogang/thumbs/4.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-sogang/5.jpg" data-title="Student Work: 3D Modelling Studio, Sogang University"><img src="img/3dmodeling-sogang/thumbs/5.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-sogang/6.jpg" data-title="Student Work: 3D Modelling Studio, Sogang University"><img src="img/3dmodeling-sogang/thumbs/6.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-sogang/7.jpg" data-title="Student Work: 3D Modelling Studio, Sogang University"><img src="img/3dmodeling-sogang/thumbs/7.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-sogang/8.jpg" data-title="Student Work: 3D Modelling Studio, Sogang University"><img src="img/3dmodeling-sogang/thumbs/8.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-sogang/9.jpg" data-title="Student Work: 3D Modelling Studio, Sogang University"><img src="img/3dmodeling-sogang/thumbs/9.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-sogang/10.jpg" data-title="Student Work: 3D Modelling Studio, Sogang University"><img src="img/3dmodeling-sogang/thumbs/10.jpg"></a>
+<a class="thumbnail width20" href="img/3dmodeling-sogang/11.jpg" data-title="Student Work: 3D Modelling Studio, Sogang University"><img src="img/3dmodeling-sogang/thumbs/11.jpg"></a>
+</div>
 
 <!-- -------------------------------------------------------------------- -->
 <span class="clearfix"> </span>
@@ -1017,7 +902,15 @@ This course focuses on 3D character design and modeling for animation, game, and
 
 The goal of this class is for students to learn both practical and theoretical knowledge in digital animation: theoretically, focusing on transition from traditional animation and practically, three-dimensional animation techniques.
 
-<div id="3danimation-sogang" class="thumbnailgrid"></div>
+<div id="3danimation-sogang" class="thumbnailgrid">
+<a class="thumbnail width20" href="img/3danimation-sogang/flowergirl.gif" data-title="Student Work: 3D Animation Theory and Practice, Sogang University"><img src="img/3danimation-sogang/thumbs/flowergirl.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-sogang/ribbons.gif" data-title="Student Work: 3D Animation Theory and Practice, Sogang University"><img src="img/3danimation-sogang/thumbs/ribbons.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-sogang/butterfly.gif" data-title="Student Work: 3D Animation Theory and Practice, Sogang University"><img src="img/3danimation-sogang/thumbs/butterfly.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-sogang/fish.gif" data-title="Student Work: 3D Animation Theory and Practice, Sogang University"><img src="img/3danimation-sogang/thumbs/fish.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-sogang/penguin.gif" data-title="Student Work: 3D Animation Theory and Practice, Sogang University"><img src="img/3danimation-sogang/thumbs/penguin.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-sogang/cubes.gif" data-title="Student Work: 3D Animation Theory and Practice, Sogang University"><img src="img/3danimation-sogang/thumbs/cubes.gif"></a>
+<a class="thumbnail width20" href="img/3danimation-sogang/world.gif" data-title="Student Work: 3D Animation Theory and Practice, Sogang University"><img src="img/3danimation-sogang/thumbs/world.gif"></a>
+</div>
 
 <!-- -------------------------------------------------------------------- -->
 <span class="clearfix"> </span>
@@ -1028,7 +921,20 @@ The goal of this class is for students to learn both practical and theoretical k
 
 [Modeling for 3D Fabrication](https://jiharu.github.io/visa3033/) is an art studio class to learn theoretical and practical knowledge in constructing and managing 3D solid modeling data, which can be processed later for 3D fabrication, and empower students' creative expression. The course takes a practice-based arts research approach to modeling for 3D fabrication, considered as an expressive medium rather than a tool. Students carry out interdisciplinary artistic research of innovative and exquisite 3D fabrication case studies to gain firm understanding and inspire new creative ideas. Based on this, students pursue further research and practice on how to use digital technologies to construct 3D models for 3D printing. The 3D software used in the class includes Meshlab, Meshmixer, 123D, Blender, Autodesk Maya and many more, to extend students’ art-based problem-solving abilities and support their unique 3D fabricated expression.
 
-<div id="3dfabrication-york" class="thumbnailgrid"></div>
+<div id="3dfabrication-york" class="thumbnailgrid">
+<a class="thumbnail width20" href="img/3dfabrication-york/amanda_and_katrina01.jpg" data-title="Student Work: Introduction to 3D Fabrication, York University"><img src="img/3dfabrication-york/thumbs/amanda_and_katrina01.jpg"></a>
+<a class="thumbnail width20" href="img/3dfabrication-york/amanda_and_katrina02.jpg" data-title="Student Work: Introduction to 3D Fabrication, York University"><img src="img/3dfabrication-york/thumbs/amanda_and_katrina02.jpg"></a>
+<a class="thumbnail width20" href="img/3dfabrication-york/camille_mendiola.jpg" data-title="Student Work: Introduction to 3D Fabrication, York University"><img src="img/3dfabrication-york/thumbs/camille_mendiola.jpg"></a>
+<a class="thumbnail width20" href="img/3dfabrication-york/david_fisher01.jpg" data-title="Student Work: Introduction to 3D Fabrication, York University"><img src="img/3dfabrication-york/thumbs/david_fisher01.jpg"></a>
+<a class="thumbnail width20" href="img/3dfabrication-york/david_fisher02.jpg" data-title="Student Work: Introduction to 3D Fabrication, York University"><img src="img/3dfabrication-york/thumbs/david_fisher02.jpg"></a>
+<a class="thumbnail width20" href="img/3dfabrication-york/figoliwo01.jpg" data-title="Student Work: Introduction to 3D Fabrication, York University"><img src="img/3dfabrication-york/thumbs/figoliwo01.jpg"></a>
+<a class="thumbnail width20" href="img/3dfabrication-york/figoliwo02.jpg" data-title="Student Work: Introduction to 3D Fabrication, York University"><img src="img/3dfabrication-york/thumbs/figoliwo02.jpg"></a>
+<a class="thumbnail width20" href="img/3dfabrication-york/figoliwo03.jpg" data-title="Student Work: Introduction to 3D Fabrication, York University"><img src="img/3dfabrication-york/thumbs/figoliwo03.jpg"></a>
+<a class="thumbnail width20" href="img/3dfabrication-york/fishfuser01.jpg" data-title="Student Work: Introduction to 3D Fabrication, York University"><img src="img/3dfabrication-york/thumbs/fishfuser01.jpg"></a>
+<a class="thumbnail width20" href="img/3dfabrication-york/fishfuser02.jpg" data-title="Student Work: Introduction to 3D Fabrication, York University"><img src="img/3dfabrication-york/thumbs/fishfuser02.jpg"></a>
+<a class="thumbnail width20" href="img/3dfabrication-york/lazo_poncho.jpg" data-title="Student Work: Introduction to 3D Fabrication, York University"><img src="img/3dfabrication-york/thumbs/lazo_poncho.jpg"></a>
+<a class="thumbnail width20" href="img/3dfabrication-york/saga.jpg" data-title="Student Work: Introduction to 3D Fabrication, York University"><img src="img/3dfabrication-york/thumbs/saga.jpg"></a>
+</div>
 
 <!-- -------------------------------------------------------------------- -->
 <span class="clearfix"> </span>
@@ -1039,7 +945,13 @@ The goal of this class is for students to learn both practical and theoretical k
 
 Spatial dynamics is an art studio course which explores objects in space, and spaces of objects, in terms of formations, functions and temporal relations. Students learn through lectures, hands-on practice, and group critique, developing an understanding of material capacities and core principles in the construction of form and structure, using paper, clay, and other basic plaster materials. Working as individuals or in groups, while taking an interdisciplinary stance bridging roles of artist, designer, and engineer, students will define theoretical and creative challenges found in nature and art to produce three-dimensional artworks integrating object and space, light and surface, image and time, and form and function.
 
-<div id="spatialdynamics-sogang" class="thumbnailgrid"></div>
+<div id="spatialdynamics-sogang" class="thumbnailgrid">
+<a class="thumbnail width20" href="img/spatialdynamics-sogang/heeyeon_choi.jpg" data-title="Student Work: Spatial Dynamics, Sogang University"><img src="img/spatialdynamics-sogang/thumbs/heeyeon_choi.jpg"></a>
+<a class="thumbnail width20" href="img/spatialdynamics-sogang/soohyeon_han01.jpg" data-title="Student Work: Spatial Dynamics, Sogang University"><img src="img/spatialdynamics-sogang/thumbs/soohyeon_han01.jpg"></a>
+<a class="thumbnail width20" href="img/spatialdynamics-sogang/soohyeon_han02.jpg" data-title="Student Work: Spatial Dynamics, Sogang University"><img src="img/spatialdynamics-sogang/thumbs/soohyeon_han02.jpg"></a>
+<a class="thumbnail width20" href="img/spatialdynamics-sogang/soohyeon_han03.jpg" data-title="Student Work: Spatial Dynamics, Sogang University"><img src="img/spatialdynamics-sogang/thumbs/soohyeon_han03.jpg"></a>
+<a class="thumbnail width20" href="img/spatialdynamics-sogang/soohyeon_han04.jpg" data-title="Student Work: Spatial Dynamics, Sogang University"><img src="img/spatialdynamics-sogang/thumbs/soohyeon_han04.jpg"></a>
+</div>
 
 <!-- -------------------------------------------------------------------- -->
 <span class="clearfix"> </span>
@@ -1050,7 +962,33 @@ Spatial dynamics is an art studio course which explores objects in space, and sp
 
 Drawing is an art studio course in which students develop basic skills to convey and articulate complex and abstract ideas and personal expression into visual forms. Students will learn the theoretical foundations of drawing as visual representation and communication through lectures, hands-on practice, and group critique. During the class, they will explore different materials, techniques, and themes, grounded in detailed observation and free imagination. For the final project, students will be encouraged to apply further contemporary experimentation responding to his/her own style.
 
-<div id="drawing-sogang" class="thumbnailgrid"></div>
+<div id="drawing-sogang" class="thumbnailgrid">
+<a class="thumbnail width20" href="img/drawing-sogang/haneulkim01.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/haneulkim01.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/haneulkim02.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/haneulkim02.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/jisookim.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/jisookim.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/sabby02.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/sabby02.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/sabby03.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/sabby03.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/1.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/1.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/2.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/2.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/3.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/3.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/4.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/4.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/5.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/5.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/6.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/6.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/7.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/7.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/8.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/8.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/9.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/9.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/10.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/10.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/11.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/11.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/12.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/12.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/13.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/13.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/14.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/14.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/15.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/15.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/16.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/16.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/17.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/17.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/18.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/18.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/19.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/19.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-sogang/20.jpg" data-title="Student Work: Drawing, Sogang University"><img src="img/drawing-sogang/thumbs/20.jpg"></a>
+</div>
 
 <!-- -------------------------------------------------------------------- -->
 <span class="clearfix"> </span>
@@ -1059,7 +997,16 @@ Drawing is an art studio course in which students develop basic skills to convey
 
 *Hongik University, 2005*
 
-<div id="drawing-hongik" class="thumbnailgrid"></div>
+<div id="drawing-hongik" class="thumbnailgrid">
+<a class="thumbnail width20" href="img/drawing-hongik/hyunkilee.jpg" data-title="Student Work: Drawing, Hongik University"><img src="img/drawing-hongik/thumbs/hyunkilee.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-hongik/jinpyeongchoi.jpg" data-title="Student Work: Drawing, Hongik University"><img src="img/drawing-hongik/thumbs/jinpyeongchoi.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-hongik/jinpyeongchoi01.jpg" data-title="Student Work: Drawing, Hongik University"><img src="img/drawing-hongik/thumbs/jinpyeongchoi01.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-hongik/jinwoooh01.jpg" data-title="Student Work: Drawing, Hongik University"><img src="img/drawing-hongik/thumbs/jinwoooh01.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-hongik/jinwoooh02.jpg" data-title="Student Work: Drawing, Hongik University"><img src="img/drawing-hongik/thumbs/jinwoooh02.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-hongik/seoyoungshin.jpg" data-title="Student Work: Drawing, Hongik University"><img src="img/drawing-hongik/thumbs/seoyoungshin.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-hongik/soominoh.jpg" data-title="Student Work: Drawing, Hongik University"><img src="img/drawing-hongik/thumbs/soominoh.jpg"></a>
+<a class="thumbnail width20" href="img/drawing-hongik/soominoh01.jpg" data-title="Student Work: Drawing, Hongik University"><img src="img/drawing-hongik/thumbs/soominoh01.jpg"></a>
+</div>
 
 </section>
 </div>
@@ -1070,24 +1017,11 @@ Drawing is an art studio course in which students develop basic skills to convey
 </div>
 </footer>
 
-<div id="lightbox">
-	<div id="lightbox2">
-		<span class="helper"></span>
-		<div id="lightbox-content">
-			<img id="lightbox-image" src="img/3danimation-sogang/flowergirl.gif">
-			<p id="lightbox-caption">This would be the caption.</p>
-		</div>
-	</div>
-</div>
-
 <script src="js/jquery.js"></script>
 <script src="js/showdown.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/ofi.min.js"></script>
 <script>
-
-
-// on load:
 function onload() {
 	
 	// translate markdown:
@@ -1102,180 +1036,6 @@ function onload() {
 		section.html(html);
 	});
 	
-	// generate student portfolio views:
-	var students = [
-		{
-			name: "3dmodeling-york",
-			title: "Student Work: Introduction to 3D Modelling, York University",
-			images: [
-				"anaschohan.jpg",
-				"benjamingallego.jpg",
-				"brentmacdonald.jpg",
-				"bruna_ferreira.jpg",
-				"candice_ho.jpg",
-				"elinalex01.jpg",
-				"elinalex02.jpg",
-				"justin_casale.jpg",
-				"koeun_lee1.jpg",
-				"kyle_ospreay.jpg",
-				"lazoponcho01.jpg",
-				"lazoponcho02.jpg",
-				"margaritachekhovskaya01.jpg",
-				"margaritachekhovskaya02.jpg",
-				"marinafreirewelby.jpg",
-				"mattdemelo.jpg",
-				"maxineveneracion01.jpg",
-				"maxineveneracion02.jpg",
-				"michael_calcada.jpg",
-				"minypham01.jpg",
-				"minypham02.jpg",
-				"vivian_cheung.jpg",
-				"zhuoxuan_li.jpg",
-				"zohebdowlut.jpg"
-			]
-		},
-		{
-			name: "3danimation-york",
-			title:"Student Work: Introduction to 3D Animation, York University",
-			images: [
-				"william.gif",
-				"victoria.gif",
-				"gallego.gif",
-				"melo.gif",
-				"bruna.gif",
-				"lazo.gif",
-				"kewen.gif",
-				"wong.gif",
-				
-				"noto.gif",
-			]
-		},
-		{
-			name: "3dmodeling-sogang",
-			title: "Student Work: 3D Modelling Studio, Sogang University",
-			images: [
-				//"01_김신01.jpg",
-				"1.jpg",
-				"2.jpg",
-				"3.jpg",
-				"4.jpg",
-				"5.jpg",
-				"6.jpg",
-				"7.jpg",
-				"8.jpg",
-				"9.jpg",
-				"10.jpg",
-				"11.jpg"
-			]
-		},
-		{
-			name: "3danimation-sogang",
-			title: "Student Work: 3D Animation Theory and Practice, Sogang University",
-			images: [
-				"flowergirl.gif",
-				"ribbons.gif",
-				"butterfly.gif",
-				"fish.gif",
-				"penguin.gif",
-				"cubes.gif",
-				"world.gif",
-			]
-		},
-		{
-			name: "3dfabrication-york",
-			title: "Student Work: Introduction to 3D Fabrication, York University",
-			images: [
-				"amanda_and_katrina01.jpg",
-				"amanda_and_katrina02.jpg",
-				"camille_mendiola.jpg",
-				"david_fisher01.jpg",
-				"david_fisher02.jpg",
-				"figoliwo01.jpg",
-				"figoliwo02.jpg",
-				"figoliwo03.jpg",
-				"fishfuser01.jpg",
-				"fishfuser02.jpg",
-				"lazo_poncho.jpg",
-				"saga.jpg"
-			]
-		},
-		{
-			name: "spatialdynamics-sogang",
-			title: "Student Work: Spatial Dynamics, Sogang University",
-			images: [
-				"heeyeon_choi.jpg",
-				"soohyeon_han01.jpg",
-				"soohyeon_han02.jpg",
-				"soohyeon_han03.jpg",
-				"soohyeon_han04.jpg",
-				//"soohyeon_han05.jpg"
-			]
-		},
-		{
-			name: "drawing-sogang",
-			title: "Student Work: Drawing, Sogang University",
-			images: [
-				"haneulkim01.jpg",
-				"haneulkim02.jpg",
-				"jisookim.jpg",
-				//"sabby01.jpg",
-				"sabby02.jpg",
-				"sabby03.jpg",
-				"1.jpg",
-				"2.jpg",
-				"3.jpg",
-				"4.jpg",
-				"5.jpg",
-				"6.jpg",
-				"7.jpg",
-				"8.jpg",
-				"9.jpg",
-				"10.jpg",
-				"11.jpg",
-				"12.jpg",
-				"13.jpg",
-				"14.jpg",
-				"15.jpg",
-				"16.jpg",
-				"17.jpg",
-				"18.jpg",
-				"19.jpg",
-				"20.jpg"
-			]
-		},
-		{
-			name: "drawing-hongik",
-			title: "Student Work: Drawing, Hongik University",
-			images: [
-				"hyunkilee.jpg",
-				"jinpyeongchoi.jpg",
-				"jinpyeongchoi01.jpg",
-				"jinwoooh01.jpg",
-				"jinwoooh02.jpg",
-				"seoyoungshin.jpg",
-				"soominoh.jpg",
-				"soominoh01.jpg"
-			]
-		},
-	];
-	
-	for (var i=0; i<students.length; i++) {
-		var data = students[i];
-		var html = [];
-		for (var j=0; j<data.images.length; j++) {
-			var img = "img/" + data.name + "/" + data.images[j];
-			var thumb = "img/" + data.name + "/thumbs/" + data.images[j];
-			//html.push('<div class="thumbsquare" style="background-image: url(\'' + img + '\')"></div>');
-			//html.push('<div class="thumbsquare" style="background-image: url(\'' + img + '\')" onclick="showlightbox(\'' + img + '\')"></div>');
-			//html.push('<a class="thumbnail width30" href="' + img + '"><img src="' + img + '"></a>');
-			
-			html.push('<a class="thumbnail width18" href="'+img+'" data-title="'+data.title+'"><img src="'+thumb+'"></a>');
-		}
-		
-		var out = html.join("");
-		
-		$("#"+data.name).html(out);
-	}
 	
 	// get chosen tab:
 	function showtab(href) {
@@ -1316,35 +1076,6 @@ function onload() {
         showtab(href);
     });
     
-    /* lightbox interaction */
-    $("#lightbox").click(function() {
-    	//$(this).hide();
-    	//$(this).attr("display", "none");
-    	console.log("hide");
-    	$("#lightbox").css("display", "none");
-    });
-    
-    $(".thumbsquare").click(function() {
-    	var bg = $(this).css('background-image').trim();
-    	bg = bg.replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
-    	console.log("heyclick", bg);
-    	
-    	showlightbox(bg);
-    });
-    
-    $(".thumbnail img").click(function() {
-    	var bg = $(this).attr('src').trim();
-    	//bg = bg.replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
-    	//console.log("heyclick", bg);
-    	
-    	showlightbox(bg);
-    });
-    
-	//showlightbox("img/morpho/wirefinal.jpg");
-
-
-	//You don’t necessarily need to use delegate option, it can be just $(this).find('a').magnificPopup( ....
-
 	// for each gallery:
 	$('.gallery').each(function() { 
 		var title = $(this).attr('data-title');
@@ -1392,15 +1123,6 @@ function onload() {
 
 
 $(onload);
-
-function showlightbox(href) {
-	/*
-	$("#lightbox-image").attr("src", href);
-	$("#lightbox-caption").text(href);
-	//$("#lightbox").show();
-	$("#lightbox").css("display", "table");
-	*/
-}
 
 </script>
 
