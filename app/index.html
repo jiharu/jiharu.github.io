@@ -387,7 +387,28 @@ Endless Current is a visualization of a complex biologically-inspired system. Th
 
 **Exhibits:**
 
-- [**HTC VivePort** virtual reality content distribution network.](https://www.viveport.com/apps/2905a17c-4835-409a-bfe5-f8d2a2f79f27)  2017-01-30 - present. *Top featured project in March.*
+- [Kaledioscope Virtual Reality Showcase volume II](http://kaleidovr.com/updates/kaleidoscope-launches-showcase-vol-02) -- selected among 21 projects for this international showcase exploring the art & science of virtual reality. 
+	- London: 2017-03-29
+	
+	- Seoul: 2017-03-30
+	
+	- Leipzig: 2017-04-02
+	
+	- Berlin: 2017-04-07
+	
+	- Los Angeles: 2017-04-20
+	
+	- Kyiv: 2017-04-22
+	
+	- Sydney: 2017-04-27
+	
+	- New York: TBD
+	
+	- San Francisco: TBD
+	
+	- Hong Kong: TBD
+
+- [**HTC VivePort** virtual reality content distribution network.](https://www.viveport.com/apps/2905a17c-4835-409a-bfe5-f8d2a2f79f27)  2017-01-30 - present. **Top featured project March 4-6.**
 
 - SV+VS (Sonifying Visuals+Visualizing Sound). Gallery MUN, **Dongdaemun Design Plaza**, Seoul, Korea. 2016-08-20 - 2016-09-18 (Curated). 
 
@@ -1128,7 +1149,19 @@ Drawing is an art studio course in which students develop basic skills to convey
 <p><strong>Exhibits:</strong></p>
 
 <ul>
-<li><p><a href="https://www.viveport.com/apps/2905a17c-4835-409a-bfe5-f8d2a2f79f27"><strong>HTC VivePort</strong> virtual reality content distribution network.</a>  2017-01-30 - present.</p></li>
+<li><p><a href="http://kaleidovr.com/updates/kaleidoscope-launches-showcase-vol-02">Kaledioscope Virtual Reality Showcase volume II</a> -- selected among 21 projects for this international showcase exploring the art &amp; science of virtual reality. </p>
+
+<ul><li><p>London: 2017-03-29</p></li>
+<li><p>Seoul: 2017-03-30</p></li>
+<li><p>Leipzig: 2017-04-02</p></li>
+<li><p>Berlin: 2017-04-07</p></li>
+<li><p>Los Angeles: 2017-04-20</p></li>
+<li><p>Kyiv: 2017-04-22</p></li>
+<li><p>Sydney: 2017-04-27</p></li>
+<li><p>New York: TBD</p></li>
+<li><p>San Francisco: TBD</p></li>
+<li><p>Hong Kong: TBD</p></li></ul></li>
+<li><p><a href="https://www.viveport.com/apps/2905a17c-4835-409a-bfe5-f8d2a2f79f27"><strong>HTC VivePort</strong> virtual reality content distribution network.</a>  2017-01-30 - present. <strong>Top featured project March 4-6.</strong></p></li>
 <li><p>SV+VS (Sonifying Visuals+Visualizing Sound). Gallery MUN, <strong>Dongdaemun Design Plaza</strong>, Seoul, Korea. 2016-08-20 - 2016-09-18 (Curated). </p></li>
 <li><p><a href="https://currentsnewmedia.org/work/endless-current/"><strong>Currents New Media Festival</strong>.</a> El Museo Cultural, and also the Digital Dome at the Institute of American Indian Arts, Santa Fe, USA. 2016-06-10 - 2016-06-26 (Juried).</p></li>
 <li><p><a href="http://visap.uic.edu/2015/artshow.html"><strong>IEEE VIS</strong> Arts Program.</a> LeRoy Neiman Center, School of the Art Institute of Chicago, USA. 2015-10-16 - 2015-10-30 (Juried).</p></li>
@@ -1797,27 +1830,29 @@ Sanctum is a virtual symbolic space based upon poetic, sculptural and visual con
 <script src="js/ofi.min.js"></script>
 <script>
 function onload() {
+
+	var genhtml = false;
 	
 	
-	/*
-	// translate markdown:
-	var converter = new Showdown.converter({
-		ghCompatibleHeaderId: true,
-		literalMidWordUnderscores: true,
-	});
-	$(".tab-view").each(function() {
-		var id = $(this).attr("id");
-		var src = $("#" + id + "-markdown");
-		var text = src.html();
+	if (genhtml) {
+		// translate markdown:
+		var converter = new Showdown.converter({
+			ghCompatibleHeaderId: true,
+			literalMidWordUnderscores: true,
+		});
+		$(".tab-view").each(function() {
+			var id = $(this).attr("id");
+			var src = $("#" + id + "-markdown");
+			var text = src.html();
 		
-		var html = converter.makeHtml(text);
-		console.log("<!-- " + id + " -->");
-		console.log(html);
+			var html = converter.makeHtml(text);
+			console.log("<!-- " + id + " -->");
+			console.log(html);
 		
-		var section = $(this);
-		section.html(html);
-	});
-	*/
+			var section = $(this);
+			section.html(html);
+		});
+	}
 	
 	// get chosen tab:
 	function showtab(href) {
