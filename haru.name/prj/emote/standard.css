@@ -1,0 +1,140 @@
+#container {
+	width: 800px;
+	\width: 820px;
+	w\idth: 800px;
+	/*border: 1px solid gray; */
+	margin: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 12px;
+	font-family: sans-serif;
+	font-size: 12px;
+	background-color: black;
+	font-color: white;
+	line-height: 18px;
+}
+
+#banner {
+	padding: 0;
+	margin: 0;
+	background-color: black; 
+	color: white;
+}
+
+#content {
+	padding: 5px;
+	padding-top: 20px;
+	border-top: 1px dotted gray;
+	background-color: black;
+	color: white;
+	font-size: 12px;
+}
+
+#footer {
+    clear: both;
+    padding: 5px;
+    margin-top: 5px;
+    border-top: 1px dotted gray;
+    color: white;
+	font-size: 12px;
+}
+
+/* logo */
+
+#logo img
+{
+    padding: 5px;
+}
+
+/* navigation */
+
+#navigation
+{
+    margin: 0;
+    padding: 3px;
+    padding-bottom: 8px;
+	font-size: 14px;
+    /*border-top: 4px solid black;*/
+}
+
+#navigation ul
+{
+    list-style: none;
+    margin: 2px;
+    padding: 0;
+    border: none;
+}
+
+#navigation li
+{
+    display: inline;
+}
+
+#navigation li a
+{
+    padding: 2px;
+    margin: 3px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+	 font-size: 14px;
+}
+
+html>body #navigation li a { width: auto; }
+
+#navigation li a:hover
+{
+    border-bottom: 2px solid black;
+    color: gray;
+}
+
+
+/* formatting */
+
+body { 
+	text-decoration:none; 
+	background-color: black;
+	color: white;
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+a {
+	font-family: sans-serif;
+	text-decoration:underline;
+	font-size:12px;
+	color:white; 
+	line-height: 18px;
+}
+
+a:hover { 
+	font-family: sans-serif;
+	text-decoration:none; 
+	font-size:12px; 
+	color:gray;
+	line-height: 18px;
+}
+
+td {
+	font-family: sans-serif;
+	font-size:12px;
+	color:white; 
+	line-height: 18px;
+}
+
+p span.keyword
+{
+    border-bottom: 1px dotted green;
+}
+
+a img
+{
+    border: none;
+}
+
+p.url-head
+{
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+}

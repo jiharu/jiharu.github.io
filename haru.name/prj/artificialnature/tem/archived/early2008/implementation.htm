@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Artificial Nature</title>
+<link href="style.css" rel="stylesheet" type="text/css"></head>
+
+<body>
+<table width="750" border="0" cellspacing="4" cellpadding="4">
+  <tr>
+    <td width="617" valign="top"><img src="img/title.jpg" width="338" height="57">
+      <p> Art Installation &amp; Research Project, Haru Ji &amp; Graham Wakefield, 2007-2008</p>
+    <p><a href="abstract.htm">Abstract</a> | <a href="concepts.htm">Concepts</a> | <a href="prototypes.htm">Prototypes</a> | <a href="implementation.htm">Implementation</a> | <a href="artists.htm">Artists</a></p>
+    <h3>Implementation</h3>
+    <p>Artificial Nature is an ongoing research project, with a number of actual and potential realizations. </p>
+    <p>&nbsp;</p>
+    <h4>Software development </h4>
+    <p>Early <a href="prototypes.htm">prototypes</a> of the project have been implemented using the Max/MSP/Jitter environment, along with <a href="www.lua.org">Lua</a> scripting extensions (<a href="http://www.cycling74.com/twiki/bin/view/Share/WesleySmith">jit.gl.lua</a> and <a href="http://www.mat.ucsb.edu/~wakefield/lua~/lua~.htm">lua~</a> for graphics and audio respectively). </p>
+    <p>The current  iterations of the project  however are entirely written in  portable C/C++ with bindings for the Lua scripting language. It is a standalone executable application (portable to MacOSX, Windows or LInux) for continuous generative production of spatialized audio (for two to sixteen loudspeakers) and multiple displays. Graphics are rendered using OpenGL, and audio is synthesized using custom-written C++ signal processing and spatialization.</p>
+    <p>The use of the Lua programming language has been central to the rapid development of the project. Lua is not only a flexible language for prototyping, it is also a highly efficient virtual machine with dynamic typing and an incremental garbage collector. We make use of Lua tables and coroutines extensively to expressively model the interactions of cells, organisms, genes, chemicals, sounds and other dynamic elements in the installation. </p>
+    <p>&nbsp; </p>
+    <h4>Installation Description </h4>
+    <p>The installation consists of multiple projections and spatialized audio providing inner and outer viewpoints upon the simulation as it progresses in real time. The simulation itself runs upon a Mac Pro embedded within the central table. The table surface is a Wacom Cintiq or touch screen offering direct interaction with the field environment. Additional sensors are placed around the screen. </p>
+    <p><img src="img/AN/st03.png" width="720" height="480"></p>
+    <p><img src="img/AN/st01.png" width="720" height="480"></p>
+    <p><img src="img/AN/st05.png" width="720" height="480"></p></td>
+  </tr>
+</table>
+
+</body>
+</html>

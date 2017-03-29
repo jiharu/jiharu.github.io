@@ -1,0 +1,4 @@
+<html><head>    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >    <style type="text/css" media="screen">@import "standard.css";</style>    <title>Emote: Template</title>
+<link rel="shortcut icon" href="http://www.mat.ucsb.edu/~jiharu/new/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="http://www.mat.ucsb.edu/~jiharu/new/favicon.ico" type="image/x-icon" />
+</head><body>	<div id="container"><?php include("menu.php") ?>        <div id="content">				<table border=0 cellpadding=5 cellspacing=5>            	<tr><td><h2>Template</h2></td><td></td></tr>					<tr>						<td valign="top" align="right"><strong>Overview:</strong></td>						<td>							stuff						</td>					</tr>				</table>        </div>	</div>	<br><br></body></html>

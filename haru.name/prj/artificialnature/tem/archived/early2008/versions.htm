@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Artificial Nature</title>
+<link href="style.css" rel="stylesheet" type="text/css"></head>
+
+<body>
+<table width="750" border="0" cellspacing="4" cellpadding="4">
+  <tr>
+    <td width="617" valign="top"><img src="img/title.jpg" width="338" height="57">
+      <p> Art Installation &amp; Research Project, Haru Ji &amp; Graham Wakefield, 2007-2008</p>
+    <p><a href="abstract.htm">Abstract</a> | <a href="concepts.htm">Concepts</a> | <a href="prototypes.htm">Prototypes</a> | <a href="implementation.htm">Implementation</a> | <a href="artists.htm">Artists</a></p>
+    <p>Artificial Nature is an ongoing research project, evolving through various iterations to gradually approach the conceptual goals with integrity. These iterations are outlined on this page. </p>
+    <p>Some of these iterations tackle  algorithms and aesthetics of reduced portions of the desired system, and thus may be regarded as prototypes or studies. Gradually each of the individual prototypes has been modularized in such a way that it can be integrated within the main project, and the full  ecosystem  begins to appear. </p>
+    <h3>Precursor: 'EvoSystem'</h3>
+    <p>A rendered animation utilizing Maya and Mel scripting to evolve a population of organisms as spatial forms. An initial exploration of evolutionary algorithms and a guiding aesthetic prototype for visual and spatial forms. </p>
+    <p>Detail: <a href="http://www.mat.ucsb.edu/~jiharu/tat/7" target="_blank">http://www.mat.ucsb.edu/~jiharu/tat/7</a></p>
+    <p><img src="img/ecosystem.jpg" width="600" height="405"></p>
+    <p>&nbsp;</p>
+    <h3>Iteration 1: Agents &amp; Dissipative Field </h3>
+    <p><img src="img/Picture-3.jpg" width="400" height="325" align="right">Modeling autopoietic systems progressed incrementally. The core notion of a boundary between an organizational unity (such as a cell) and an external environment was implemented first. </p>
+    <p>Individual cells move through and interact with a field of  morphogens (represented by color and intensity.) Cells also maintain an inner environment of morphogen densities. Cells carry catalysts internally (represented as executable functions) to process their internal morphogens. In order to maintain themselves (and prevent death), cells exchange morphogens with the external field to maintain their requisite inner equilibrium. </p>
+    <p>Thus, according the the movement and activities of living cells, regions in the field may become gardens of eden, or toxic landscapes. Different species have different morphogen needs, leading to population explosions and collapses in complex relationships. </p>
+    <p><img src="img/fieldeffects.jpg" width="180" height="240" hspace="2" align="right">In order to model dissipative structures in far-from-equilibrium conditions, independent temporal processing of the morphogen field was introduced. Processing included accretion (simulating the far-from-equilibrium effect of free energy, such as the role of the sun in our own ecosystem), spatial displacement with regional variation (vital to model dissipative structures, but also suggestive of weather or surface topographies for example.) </p>
+    <p>The interactions between such simple processes and the simple cells produces complex evolving images of aesthetic interest. An important component of the  installation is the mapping of user-interactions to the deformations and transformations of the regional aggregation and displacement effects upon the morphogen fields. </p>
+    <p>A number of different environment topologies have been explored, from more human scale island landscapes to mobile surfaces to inner worlds such as tubes. Current investigations include volumetric in addition to surface-oriented fields. Example screen captures (some including organisms):</p>
+    <p><img src="img/topologies.jpg" width="710" height="100"><br>
+        <br>
+        <img src="img/combinations.jpg" width="710" height="160"></p>
+    <p><img src="img/aliens.jpg" width="710" height="100"></p>
+    <p>
+      <embed src="mediaplayer.swf" width="640" height="480" allowfullscreen="true" allowscriptaccess="always" flashvars="&file=img/an.flv&height=480&width=640" />    
+</p>
+    <p><a href="img/an_H.264_300Kbps.mov" target="_blank">Movie (300 kbps)</a></p>
+    <p><a href="img/an_H.264_LAN.mov" target="_blank">Movie (LAN) </a></p>
+    <h3> Iteration 2: Gamogenesis and Propagation </h3>
+    <p><img src="img/evodevo.jpg" width="710" height="120"></p>
+    <p>Taking the organisms in abstraction, a series of prototypes produced a minimal model of 'evo-devo' interaction. This incorporates a developmental model of cell specialization according to gene structure, independent cell growth, metabolism and collapse, and an evolutionary model of genetic crossover and mutation between individuals of a population. Qualitative properties of cells derive from cell types  simplified to basic functions: sensing, moving,  energy exchange and reproduction. </p>
+    <p>Properties of cells (size, health, age) directly impact quantitative aspects of their behavior, and are partly environmentally, partly genotypically caused. Recognizable varieties or races  diverge, however speciation is not yet possible.<br>
+      <br>
+      <img src="img/tubes.jpg" width="710" height="215"></p>
+    <p>
+      <embed src="mediaplayer.swf" width="640" height="480" allowfullscreen="true" allowscriptaccess="always" flashvars="&file=img/tubeworld.flv&height=480&width=640" />    
+</p>
+    <h3>Iteration 3: Spatial Communication &amp; Entrainment </h3>
+    <p>The phenomenon of entrainment, or sync, is used to model interaction between multiple organisms. The classic example of entrainment is the synchronized phosphorescent pulsing of fireflies. The supposed mechanism is relatively simple: each firefly has a natural pulsing period (usually quite closely matched between individuals), but indeterminate phase. Entrainment, or phase alignment, occurs by either suppressing or encouraging the likelihood of a pulse according to the amount of light energy in the vicinity of the organism. We modeled this behavior using parallel collaborative routines (coroutines) per organism, reading from and writing to  a global field of luminance. Early experiments are limited to frame-rate, however current exploration extends to audio-rate parallelism in the sync periods. </p>
+    <p><img src="img/sync.jpg" width="710" height="200"></p>
+    <p>
+      <embed src="mediaplayer.swf" width="640" height="480" allowfullscreen="true" allowscriptaccess="always" flashvars="&file=img/sync-world1.flv&height=480&width=640" />          </p> 
+	  <p>
+      <embed src="mediaplayer.swf" width="640" height="480" allowfullscreen="true" allowscriptaccess="always" flashvars="&file=img/sync-world2.flv&height=480&width=640" />          </p>
+      <h4>Progressive Integration</h4>
+    <p>The images   below show  complex algorithmic organism structures composed of supershape functions. As regional field quantities change in three-dimensional space, the mobile behaviors and phyisical forms of the organisms change accordingly.  </p>
+    <p><img src="img/supershapes.jpg" width="710" height="156"></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p></td>
+  </tr>
+</table>
+
+</body>
+</html>
